@@ -1,30 +1,7 @@
-function showHideHint() {
-	let div = document.getElementById("hint");
-	let link = document.getElementById("toggle");
-	if (div.style.display === "none") {
-		div.style.display = "block";
-		link.innerText = "Dölj hint";
-	} else {
-		div.style.display = "none";
-		link.innerText = "Visa hint";
-	}
-	return false;
-}
-
-function swapImage() {
-	let img = document.getElementById("map_image");
-	let re = /^(.*map_\d\d).*png/;
-	let imgName = re.exec(img.src)[1];
-	if (img.src.indexOf("hint") === -1) {
-		img.src = imgName + "_hint.png";
-	} else {
-		img.src = imgName + ".png";
-	}
-}
-
 function previousPage() {
 	let url = window.location.href;
 	let file = url.split('/').pop();
+	console.log(file);
 	let index = url.replace("bild", "").replace(".htm", "");
 	console.log(index);
 	if (index == "1") {
@@ -38,6 +15,7 @@ function previousPage() {
 function nextPage() {
 	let url = window.location.href;
 	let file = url.split('/').pop();
+	console.log(file);
 	let index = url.replace("bild", "").replace(".htm", "");
 	console.log(index);
 	if (index == "15") {

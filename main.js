@@ -26,6 +26,7 @@ function previousPage() {
 	let url = window.location.href;
 	let file = url.split('/').pop();
 	let index = url.replace("bild", "").replace(".htm", "");
+	console.log(index);
 	if (index == "1") {
 		index = "15";
 	} else {
@@ -38,6 +39,7 @@ function nextPage() {
 	let url = window.location.href;
 	let file = url.split('/').pop();
 	let index = url.replace("bild", "").replace(".htm", "");
+	console.log(index);
 	if (index == "15") {
 		index = "11";
 	} else {

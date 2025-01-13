@@ -1,8 +1,7 @@
 function previousPage() {
 	let url = window.location.href;
 	let file = url.split('/').pop();
-	console.log(file);
-	let index = url.replace("bild", "").replace(".htm", "");
+	let index = file.replace("bild", "").replace(".htm", "");
 	console.log(index);
 	if (index == "1") {
 		index = "15";
@@ -15,8 +14,7 @@ function previousPage() {
 function nextPage() {
 	let url = window.location.href;
 	let file = url.split('/').pop();
-	console.log(file);
-	let index = url.replace("bild", "").replace(".htm", "");
+	let index = file.replace("bild", "").replace(".htm", "");
 	console.log(index);
 	if (index == "15") {
 		index = "11";

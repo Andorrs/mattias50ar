@@ -23,3 +23,14 @@ function nextPage() {
 	}
 	window.location.href = "https://main.dgvp1v4kbnr15.amplifyapp.com/bild" + index + ".htm";
 }
+
+function swapImage() {
+	let img = document.getElementById("image");
+	let re = /^(.*bild_\d+).*jpg/;
+	let imgName = re.exec(img.src)[1];
+	if (img.src.indexOf("orig") === -1) {
+		img.src = imgName + "_orig.jpg";
+	} else {
+		img.src = imgName + ".jpg";
+	}
+}

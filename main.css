@@ -30,8 +30,10 @@ input[type=text] {
 
 .prevlink {
 	float: left;
+	font-size: 60px;
 }
 
 .nextlink {
 	float: right;
+	font-size: 60px;
 }

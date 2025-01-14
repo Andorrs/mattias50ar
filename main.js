@@ -1,10 +1,11 @@
+const numberOfImages = "15";
+
 function previousPage() {
 	let url = window.location.href;
 	let file = url.split('/').pop();
 	let index = file.replace("bild", "").replace(".htm", "");
-	console.log(index);
-	if (index == "1") {
-		index = "15";
+	if (index === "1") {
+		index = numberOfImages;
 	} else {
 		index--;
 	}
@@ -15,8 +16,7 @@ function nextPage() {
 	let url = window.location.href;
 	let file = url.split('/').pop();
 	let index = file.replace("bild", "").replace(".htm", "");
-	console.log(index);
-	if (index == "15") {
+	if (index === numberOfImages) {
 		index = "11";
 	} else {
 		index++;

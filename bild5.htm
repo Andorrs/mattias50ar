@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-<title>Bild 5</title>
+<title>Bild 1</title>
 <meta charSet="UTF-8">
 <meta name="viewport" content="width=530">
 <link rel="stylesheet" type="text/css" href="main.css">
 <script src="main.js"></script>
 </head>
 <body>
-<h3>Bild 5</h3>
-<img src="bild5.jpg" alt="Bild 5">
-<footer>
+<h3 onclick="showHideHistory();">Bild 1</h3>
+<p id="history" style="display:none;">Mattias och Tilda i trädgården på Skallavångsvägen. Året är 2006</p>
+<img src="images/bild1_small.jpg" id="image" onclick="swapImage();" alt="Bild 1">
+<div style="display:none;"><img src="images/bild1_orig.jpg"></div>
+<div style="display:none;"><img src="images/bild1_cropped.jpg"></div>
+<footer id="footerArea" style="display:none;">
 <a id="prev" class="prevlink" href="javascript:previousPage();">&#8678;</a>
 <a id="next" class="nextlink" href="javascript:nextPage();">&#8680;</a>
 </footer>

@@ -1,4 +1,5 @@
 const numberOfImages = "15";
+const showFooter = false;
 
 function previousPage() {
 	let url = window.location.href;
@@ -37,7 +38,24 @@ function swapImage() {
 	}
 }
 
+function swapImageHardMode() {
+	let img = document.getElementById("image");
+	let re = /^(.*bild\d+).*jpg/;
+	let imgName = re.exec(img.src)[1];
+	if (img.src.indexOf("cropped") > 0) {
+		img.src = imgName + "_small.jpg";
+	} else {
+		img.src = imgName + "_cropped.jpg";
+	}
+}
+
 function showHideHistory() {
 	let p = document.getElementById("history");
 	p.style.display = (p.style.display === "none") ? "block" : "none";
+}
+
+window.onload = function() {
+	if (showFooter) {
+		document.getElementById("footer").style.display = "block";
+	}
 }

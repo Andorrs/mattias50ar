@@ -36,3 +36,8 @@ function swapImage() {
 		img.src = imgName + "_cropped.jpg";
 	}
 }
+
+function showHideHistory() {
+	let p = document.getElementById("history");
+	p.style.display = (p.style.display === "none") ? "block" : "none";
+}

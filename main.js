@@ -26,11 +26,13 @@ function nextPage() {
 
 function swapImage() {
 	let img = document.getElementById("image");
-	let re = /^(.*bild_\d+).*jpg/;
+	let re = /^(.*bild\d+).*jpg/;
 	let imgName = re.exec(img.src)[1];
-	if (img.src.indexOf("orig") === -1) {
+	if (img.src.indexOf("orig") > 0) {
+		img.src = imgName + "_small.jpg";
+	} else if (img.src.indexOf("cropped") > 0) {
 		img.src = imgName + "_orig.jpg";
 	} else {
-		img.src = imgName + ".jpg";
+		img.src = imgName + "_cropped.jpg";
 	}
 }
